@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="./css/question.css">
+<script>
+	function myFunction(){
+		console.log("yup");
+		document.getElementById("aa").click();
+	}
+</script>
+
+</head>
+
+
+<body>
+
+
+		<div class="form-class">
+			
+			<h1>Create Question</h1>
+			 <form action="/createquestion" id="form1" class="search_form" spellcheck="false" method="post"> 
+				<input type="text" name="question" label="Question-" placeholder="Question" required="" class="form-control question">
+				<div class="options">
+                <div class="first">
+                    <input type="text" name="option1" placeholder="option1" required="" class="form-control input-width">
+				    <input type="text" name="option2" placeholder="option2" required="" class="form-control input-width">
+                </div>
+                <div class="second">
+				    <input type="text" name="option3" placeholder="option3" required="" class="form-control input-width">
+				    <input type="text" name="option4" placeholder="option4" required="" class="form-control input-width">
+	            </div>
+
+                <div class="answer">
+                    <input type="text" name="answer" placeholder="answer" required="" class="form-control input-width">
+                </div>
+                </div>
+				<button type="submit" class="submit-btn">next</button>
+				<a href="/profile" id="aa"></a>
+				<button type="submit" class="submit-btn" onclick="myFunction()">finish</button>
+				
+	
+			
+            </form>
+			
+		</div>
+	<script src="./JS/main.js"></script>
+</body>
+</html>

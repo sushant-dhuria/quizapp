@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.thanks-attempt{
+    width: 40vw;
+    margin: auto;
+    margin-top: 4rem;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px -10px rgba(101, 173, 131, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* align-items: center; */
+}
+
+.thanks-attempt img{
+    width: 80px;
+    height: 80px;
+}
+
+.thanks-attempt h1{
+   margin-bottom: 2rem;
+}
+
+.view__results-btn{
+    width: 60%;
+    border: none;
+    outline: none;
+    padding: 0.6rem;
+    background-color: #6fd649;
+    color: #fff;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+}
+
+.view__results-btn:hover , .view__results-btn:active{
+    cursor: pointer;
+}
+
+@media (max-width : 850px){
+    .thanks-attempt{
+        width: 60vw;
+    }
+}
+
+@media (max-width : 600px){
+    .thanks-attempt{
+        width: 70vw;
+    }
+}
+
+@media (max-width : 460px){
+    .thanks-attempt{
+        width: 80vw;
+        padding: 2.5rem;
+    }
+}

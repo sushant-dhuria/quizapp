@@ -1,0 +1,217 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+	
+    <style>
+   
+/* header home page */
+
+body{
+    /* background-color: rgba(0,0,0,0.05);; */
+    font-family: 'Quicksand', sans-serif;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-heading{
+    font-size: 1.5rem;
+    margin: .5rem;
+    font-weight: bold;
+}
+
+.nav-menu{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li{
+    list-style: none;
+}
+
+.nav-links{
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    color: black;
+}
+
+.nav-links:hover , .nav-links:active{
+    background-color: #f2f2f2;
+}
+
+.menu-toggle{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+}
+
+.menu-toggle:hover , .menu-toggle:active{
+    cursor: pointer;
+}
+
+.menu-toggle .bar{
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+
+
+
+@media (max-width : 400px) {
+    .menu-toggle{
+        display: flex;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu{
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links{
+        padding: .5rem 1rem;
+    }
+
+    .active{
+        display: flex !important;
+    }
+
+    .card{
+        width: 65vw;
+    }
+}
+
+.form-class{
+    width: 50vw;
+    margin: auto;
+    margin-top: 4rem;
+    background-color: #6577B3;
+    padding: 3.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 25px 40px -10px rgba(15, 61, 84, 0.5);
+    align-items: center;
+    text-align: center;
+}
+
+.question{
+    width: 100%;
+    margin: 0.6rem 0;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+    text-align: left;
+}
+
+.question::placeholder ,.options::placeholder{
+    color: rgb(154, 154, 154);
+    opacity: 1;
+}
+
+.submit-btn{
+    border: none;
+    outline: none;
+    width: 10rem;
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+    margin-top: 1rem;
+    margin-right: 0.6rem;
+    background-color: #EDD94C;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #6577B3;
+}
+
+.submit-btn:hover , .submit-btn:active{
+    cursor: pointer;
+}
+
+@media(max-width: 850px){
+ .form-class{
+        width: 65vw;
+    }
+}
+
+@media(max-width: 6000px){
+    .form-class{
+        width: 75vw;
+    }
+
+    .submit-btn{
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width: 500px){
+    .form-class{
+        width: 75vw;
+    }
+
+    .submit-btn{
+        width: 8rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-heading">PD Quiz</div>
+        <div class="menu-toggle" id="mobile-nav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+           
+            <li><a href="/about" class="nav-links">About Us</a></li>
+            <li class="abc">
+                <a href="/logout" class="nav-links">Logout</a>
+            </li>
+        </ul>
+    </nav>
+	<%=message  %> 
+    <div class="form-class">
+        <form action="/attemptquiz" id="form1" class="search_form" spellcheck="false" method="post"> 
+           <input type="text" name="Name" label="Name-" placeholder="Name" required="" class="form-control question">
+           <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      
+    </div>
+
+<script>
+        const menuToggle = document.getElementsByClassName("menu-toggle");
+const navMenu = document.getElementsByClassName("nav-menu")[0];
+
+
+for(let i = 0 ;  i < menuToggle.length ; i++){
+    menuToggle[i].addEventListener("click" , () =>{
+        navMenu.classList.toggle("active");
+    })
+}
+       </script>
+
+</body>
+
+</html>

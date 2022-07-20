@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+body{
+    /* background-color: rgba(0,0,0,0.05);; */
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+.thanks-attempt{
+    width: 40vw;
+    margin: auto;
+    margin-top: 4rem;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px -10px rgba(101, 173, 131, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* align-items: center; */
+}
+
+.thanks-attempt img{
+    width: 80px;
+    height: 80px;
+}
+
+.thanks-attempt h1{
+   margin-bottom: 2rem;
+}
+
+.view__results-btn{
+    width: 60%;
+    border: none;
+    outline: none;
+    padding: 0.6rem;
+    background-color: #6fd649;
+    color: #fff;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+}
+
+.view__results-btn:hover , .view__results-btn:active{
+    cursor: pointer;
+}
+
+@media (max-width : 850px){
+    .thanks-attempt{
+        width: 60vw;
+    }
+}
+
+@media (max-width : 600px){
+    .thanks-attempt{
+        width: 70vw;
+    }
+}
+
+@media (max-width : 460px){
+    .thanks-attempt{
+        width: 80vw;
+        padding: 2.5rem;
+    }
+}
+
+
+
+
+input{
+	text-align: center;
+}
+.mssg{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+
+
+
+
+/* header home page */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-heading{
+    font-size: 1.5rem;
+    margin: .5rem;
+    font-weight: bold;
+}
+
+.nav-menu{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li{
+    list-style: none;
+}
+
+.nav-links{
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    color: black;
+}
+
+.nav-links:hover , .nav-links:active{
+    background-color: #f2f2f2;
+}
+
+.menu-toggle{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+}
+
+.menu-toggle:hover , .menu-toggle:active{
+    cursor: pointer;
+}
+
+.menu-toggle .bar{
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+
+
+
+@media (max-width : 400px) {
+    .menu-toggle{
+        display: flex;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu{
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links{
+        padding: .5rem 1rem;
+    }
+
+    .active{
+        display: flex !important;
+    }
+
+    .card{
+        width: 65vw;
+    }
+}
+
+</style>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-heading">PD Quiz</div>
+        <div class="menu-toggle" id="mobile-nav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#" class="nav-links">About Us</a></li>
+            <li class="abc">
+                <a href="/logout" class="nav-links">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="thanks-attempt">
+	    <h1>THANKS FOR ATTEMPTING THE QUIZ</h1>
+        <p>Your Response has been saved</p>
+        <div class="form-class">
+        <form action="/viewresults" id="form1" class="search_form" spellcheck="false" method="get"> 
+        <button type="submit" class="view__results-btn">View Results</button>
+       </form>
+    </div>
+       <script>
+        const menuToggle = document.getElementsByClassName("menu-toggle");
+const navMenu = document.getElementsByClassName("nav-menu")[0];
+
+
+for(let i = 0 ;  i < menuToggle.length ; i++){
+    menuToggle[i].addEventListener("click" , () =>{
+        navMenu.classList.toggle("active");
+    })
+}
+
+
+       </script>
+</body>
+</html>

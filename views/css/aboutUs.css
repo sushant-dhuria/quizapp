@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.about-heading{
+    font-size: 3rem;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.about-container{
+    display: flex;
+    margin: 0 3rem 3rem 3rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-card{
+    width: 28%;
+    border-radius: 1rem;
+    box-shadow: 0 20px 30px -10px rgba(150,170,180,0.5);
+    height: 65vh;
+}
+
+.about-image{
+    height: 75%;
+    width: 100%;
+}
+
+.about-image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.about-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.socialicon a i{
+    font-size: 1.5rem;
+    margin: 0 0.2rem;
+    color: black;
+}
+
+@media (max-width : 1000px){
+    .about-card{
+        width: 31%;
+    }
+}
+
+@media (max-width:850px){
+    .about-container{
+        flex-direction: column;
+    }
+
+    .about-card{
+        width: 40%;
+        margin: 1rem;
+    }
+}
+
+@media (max-width:700px){
+    .about-card{
+        width: 50%;
+        margin: 1rem;
+    }
+}
+
+@media (max-width:550px){
+    .about-card{
+        width: 60%;
+        margin: 1rem;
+    }
+}
+
+@media (max-width:500px){
+    .about-card{
+        width: 65%;
+        margin: 1rem;
+    }
+}
+
+@media (max-width:500px){
+    .about-card{
+        width: 75%;
+        margin: 1rem;
+    }
+}
+
+@media (max-width:400px){
+    .about-card{
+        width: 90%;
+        margin: 1rem;
+    }
+}
+
+@media (max-width:350px){
+    .about-card{
+        width: 95%;
+        margin: 1rem;
+    }
+}
